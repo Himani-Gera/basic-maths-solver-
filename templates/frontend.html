@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Basic Calculator</title>
+<script>
+function insert(value){
+document.getElementById ("display").value+=value}
+function clearDisplay(){
+document.getElementById("display").value=""}
+</script>
+</head>
+<body>
+<form align="center" method="POST" action="/calculate">
+<p text align ="center">
+<label> Basic Calculator</label>
+</p>
+<input type="text" name="expression" id="display" readonly>
+
+
+<table align="center">
+<tr>
+<td>
+<input type="button" value="1" onclick="insert('1')">
+</td>
+<td>
+<input type="button" value="2" onclick="insert('2')">
+</td>
+<td>
+<input type="button" value="3" onclick="insert('3')">
+</td>
+<td>
+<input type="button" value="+" onclick="insert('+')">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="4" onclick="insert('4')">
+</td>
+<td>
+<input type="button" value="5" onclick="insert('5')">
+</td>
+<td>
+<input type="button" value="6" onclick="insert('6')">
+</td>
+<td>
+<input type="button" value="*" onclick="insert('*')">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="7" onclick="insert('7')">
+</td>
+<td>
+<input type="button" value="8" onclick="insert('8')">
+</td>
+<td>
+<input type="button" value="9" onclick="insert('9')">
+</td>
+<td>
+<input type="button" value="/" onclick="insert('/')">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="0" onclick="insert('0')">
+</td>
+<td>
+<input type="button" value="-" onclick="insert('-')">
+</td>
+<td>
+<input type="button" value="%" onclick="insert('%')">
+</td>
+<td>
+<input type="button" value="clear" onclick="clearDisplay()">
+</td>
+</tr>
+</table>
+<input type="submit" value="=">
+</form>
+{% if result %}
+<h3 align="center">Result={{result}}</h3>
+{%endif%}
+</body>
+</html>
