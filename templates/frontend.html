@@ -2,6 +2,7 @@
 <head>
 <title>Basic Calculator</title>
 <script>
+    //function to get display value and to clear display
 function insert(value){
 document.getElementById ("display").value+=value}
 function clearDisplay(){
@@ -9,14 +10,15 @@ document.getElementById("display").value=""}
 </script>
 </head>
 <body>
+    //form is used for backend calculation
 <form align="center" method="POST" action="/calculate">
 <p text align ="center">
 <label> Basic Calculator</label>
 </p>
-<input type="text" name="expression" id="display" readonly>
-
-
+<input type="text" name="function" id="display" readonly>
+//creating a table for buttons   and inserting them as table data
 <table align="center">
+    //row 1
 <tr>
 <td>
 <input type="button" value="1" onclick="insert('1')">
@@ -31,6 +33,7 @@ document.getElementById("display").value=""}
 <input type="button" value="+" onclick="insert('+')">
 </td>
 </tr>
+//row2
 <tr>
 <td>
 <input type="button" value="4" onclick="insert('4')">
@@ -45,6 +48,7 @@ document.getElementById("display").value=""}
 <input type="button" value="*" onclick="insert('*')">
 </td>
 </tr>
+//row 3
 <tr>
 <td>
 <input type="button" value="7" onclick="insert('7')">
@@ -59,6 +63,7 @@ document.getElementById("display").value=""}
 <input type="button" value="/" onclick="insert('/')">
 </td>
 </tr>
+//row 4
 <tr>
 <td>
 <input type="button" value="0" onclick="insert('0')">
@@ -74,8 +79,10 @@ document.getElementById("display").value=""}
 </td>
 </tr>
 </table>
+// submit button i.e. = sign button for calculating 
 <input type="submit" value="=">
 </form>
+//used for representing the result value concluded
 {% if result %}
 <h3 align="center">Result={{result}}</h3>
 {%endif%}
