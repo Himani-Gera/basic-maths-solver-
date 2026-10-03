@@ -1,3 +1,4 @@
+
 # A basic calculator 
 This is a basic calculator using python as main language and using flask to connect frontend of a basic calculator (html).
 
@@ -8,4 +9,6 @@ This is a basic calculator using python as main language and using flask to conn
 
 # preview
 
-![calculator](image.png)
+![calculator](templates/image.png)
+
+
